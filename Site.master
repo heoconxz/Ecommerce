@@ -4,6 +4,27 @@
 
 <html lang="en">
 <head runat="server">
+
+
+  <!-- <link href = "jquery-ui-1.12.1/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "jquery-ui-1.12.1/jquery-ui.js"></script>
+      <script src = "jquery-ui-1.12.1/jquery-ui.js""></script> -->
+
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+      
+    <!--  <script type = "text/javascript">
+         $(function () {
+            $("#datepicker").datepicker();
+         });
+      </script> -->
+
+    <script type = "text/javascript">
+        $('#derp').html("Next Step..");
+      </script>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - My ASP.NET Application</title>
@@ -39,6 +60,14 @@
         </asp:ScriptManager>
 
         <div class="navbar navbar-inverse navbar-fixed-top">
+
+          
+         <div id = "dialogMsg" title = "First JqueryUI Example">
+            Hello this is my first JqueryUI example.
+         </div>
+            <p id="derp"> This is a test</p>
+      
+
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
