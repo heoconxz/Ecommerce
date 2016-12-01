@@ -5,18 +5,9 @@
 <html lang="en">
 <head runat="server">
 
-    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
-        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.theme.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-
-
-    <!--  <script type = "text/javascript">
-         $(function () {
-            $("#datepicker").datepicker();
-         });
-      </script> -->
-
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,11 +22,11 @@
 </head>
 <body>
     <form runat="server">
-        <asp:ScriptManager runat="server">
-            <Scripts>
+        <%--<asp:ScriptManager runat="server">
+            <Scripts>--%>
                 <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
                 <%--Framework Scripts--%>
-                <asp:ScriptReference Name="MsAjaxBundle" />
+                <%--<asp:ScriptReference Name="MsAjaxBundle" />
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="bootstrap" />
                 <asp:ScriptReference Name="respond" />
@@ -47,10 +38,10 @@
                 <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />
+                <asp:ScriptReference Name="WebFormsBundle" />--%>
                 <%--Site Scripts--%>
-            </Scripts>
-        </asp:ScriptManager>
+         <%--   </Scripts>
+        </asp:ScriptManager>--%>
 
         <div class="navbar navbar-inverse navbar-fixed-top">
 
@@ -58,8 +49,6 @@
             <div id="dialogMsg" title="First JqueryUI Example">
                 Hello this is my first JqueryUI example.
             </div>
-            <p id="derp">This is a test</p>
-
 
             <div class="container">
                 <div class="navbar-header">
@@ -73,6 +62,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/">Catagories</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
@@ -99,7 +89,24 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
+        </div>
+        <div class="footer">
             <footer>
+                <a href= "mailto:ThisIsAFakeAddress@RaiderTraide.com? Subject:Contact" target="_top">
+                    <img src="Images/email.png" alt="Email Icon" style="width: 3em; height: 3em;" />
+                </a>
+                <a href="https://www.facebook.com/raider.trader.9">
+                    <img src="Images/fb.png" alt="Facebook Icon" style="width: 3em; height: 3em;" />
+                </a>
+                <a href="https://plus.google.com/">
+                    <img src="Images/g_plus.png" alt="GooglePlus Icon" style="width: 3em; height: 3em;" />
+                </a>
+                <a href="https://www.instagram.com/?hl=en">
+                    <img src="Images/ig.png" alt="IG Icon" style="width: 3em; height: 3em;" />
+                </a>
+                <a href="https://twitter.com/?lang=en">
+                    <img src="Images/twitter.png" alt="Twitter Icon" style="width: 3em; height: 3em;" />
+                </a>
                 <p>&copy; <%: DateTime.Now.Year %> - Tung, TJ, Ashton and Austin project.</p>
             </footer>
         </div>
@@ -109,17 +116,9 @@
 
 <script type="text/javascript">
     $(function () {
-        $('#dialogMsg').dialog("open");
-    });
-</script>
-
-<script type="text/javascript">
-    $('#derp').html("Next Step..");
-</script>
-
-<%--<script type="text/javascript">
-    $(function () {
         $('#dialogMsg').dialog();
     });
-</script>--%>
+</script>
+
+
 </html>
