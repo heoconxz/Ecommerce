@@ -7,13 +7,15 @@
              width: 100px}
 
          .grey_text{
-             color:#535353''
+             color:#535353
          }
       </style>
 
 </asp:Content>
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server" >
+    <asp:ListView ID="Product_Info" runat="server"></asp:ListView>
+    
 
     
 
@@ -55,8 +57,9 @@
         <div class="col-md-4">
             <h2 class="blue_text">Product Details:</h2>
             <p class ="grey_text">
-               Description here Description here Description here Description here Description here 
-                Description here Description here Description here Description here Description here 
+                <%--<%# Bind("Description") %>--%>
+                Description Description Description Description Description Description Description Description Description Description 
+              
             </p>
         </div>
         <div class="col-md-4" style=" ">
@@ -72,7 +75,7 @@
            </p>
         </div>
     </div>
-
+    <asp:ObjectDataSource ID="Product" runat="server" SelectMethod="GetData" TypeName="DataSetTableAdapters.ProductTableAdapter"></asp:ObjectDataSource>
     
 
 <!-- Javascript -->
