@@ -9,6 +9,8 @@ public partial class Product : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        //_code = GetUniqueIDRelativeTo();
+        //_productName = Product.SearchById(_code).name;
+        //_description = Product.SearchById(_code).description;
     }
 }
