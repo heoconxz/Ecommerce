@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-4">
             <h2>BackPacks</h2>
-                <img src="Images/Products/BackPacks/BP_1_A.png" alt="BackPack" style="position:relative; width:100%">
+                <img src="Picture/b11.jpg" alt="BackPack" style="position:relative; width:100%">
         </div>
         <div class="col-md-4">
             <h2>Couches</h2>
@@ -20,6 +20,5 @@
         </div>
     </div>
 
-    
- 
+
 </asp:Content>
