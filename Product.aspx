@@ -7,17 +7,13 @@
              width: 100px}
 
          .grey_text{
-             color:#535353''
+             color:#535353;
          }
       </style>
 
 </asp:Content>
-
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
     
-
-
     <div class="row">
         <div class="col-md-6">
             <h2  class="blue_text" style="position:relative; float:left; ">Product Name</h2>

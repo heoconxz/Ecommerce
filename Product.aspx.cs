@@ -12,5 +12,8 @@ public partial class Product : System.Web.UI.Page
         //_code = GetUniqueIDRelativeTo();
         //_productName = Product.SearchById(_code).name;
         //_description = Product.SearchById(_code).description;
+        int id = int.Parse(Request.QueryString["ID"]);
+        DataSetTableAdapters.ProductTableAdapter ds = new DataSetTableAdapters.ProductTableAdapter();
+        DataSet.ProductRow item = (DataSet.ProductRow) ds.Product_By_ID(id);
     }
 }
