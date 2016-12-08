@@ -11,4 +11,19 @@ public partial class _Default : Page
     {
 
     }
+
+    protected void link_1(object sender, EventArgs e)
+    {
+        Response.Redirect("ProductList.aspx?CategoryID=1"); //BackPack
+    }
+
+    protected void link_2(object sender, EventArgs e)
+    {
+        Response.Redirect("ProductList.aspx?CategoryID = 2"); //Couch
+    }
+
+    protected void link_3(object sender, EventArgs e)
+    {
+        Response.Redirect("ProductList.aspx?CategoryID = 3"); //Tv
+    }
 }
