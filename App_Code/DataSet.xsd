@@ -141,7 +141,7 @@
               <Mapping SourceColumn="ImageName3" DataSetColumn="ImageName3" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="DefaultConnection (Web.config)" DbObjectName="[aspnet-Ecommerce-0d714091-0312-4521-9bae-303a2fa56a85].dbo.Product_By_ID" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Product_By_ID" Modifier="Public" Name="Product_By_ID" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Product_By_ID">
+              <DbSource ConnectionRef="DefaultConnection (Web.config)" DbObjectName="[aspnet-Ecommerce-0d714091-0312-4521-9bae-303a2fa56a85].dbo.Product_By_ID" DbObjectType="StoredProcedure" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByID" GeneratorSourceName="Product_By_ID" GetMethodModifier="Public" GetMethodName="GetDataByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByID" UserSourceName="GetDataByID">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.Product_By_ID</CommandText>

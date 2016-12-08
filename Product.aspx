@@ -16,19 +16,19 @@
     
     <div class="row">
         <div class="col-md-6">
-            <h2  class="blue_text" style="position:relative; float:left; ">Product Name</h2>
-            <h2  class="blue_text" style="position:relative; float:right; "> Price: $$</h2>    
+            <h2  class="blue_text" style="position:relative; float:left; "><%#item.Name%></h2>
+            <h2  class="blue_text" style="position:relative; float:right; "> Price: <%# item.Price %>$$</h2>    
 
             <div id="bulletLooper" data-looper="go" class="looper slide" style="width:100%">
     <div class="looper-inner">
         <div class="item">
-            <img src="Images/Products/Couches/c_1_a.jpg" alt="couch 1" style="position:relative; width:100%;">
+            <img src='Picture/<%# item.ImageName1 %>' alt="couch 1" style="position:relative; width:100%;">
         </div>
         <div class="item">
-            <img src="Images/Products/Couches/c_2_a.jpg" alt=""  style=" position:relative; width:100%;">
+            <img src='Picture/<%# item.ImageName2 %>' alt=""  style=" position:relative; width:100%;">
         </div>
         <div class="item">
-            <img src="Images/Products/Tv/t_1_b.jpg"  style=" position:relative; width:100%;"/>
+            <img src='Picture/<%# item.ImageName3 %>'  style=" position:relative; width:100%;"/>
         </div>
     </div>
                 <nav>
@@ -51,8 +51,7 @@
         <div class="col-md-4">
             <h2 class="blue_text">Product Details:</h2>
             <p class ="grey_text">
-               Description here Description here Description here Description here Description here 
-                Description here Description here Description here Description here Description here 
+               <%# item.Description %>
             </p>
         </div>
         <div class="col-md-4" style=" ">
