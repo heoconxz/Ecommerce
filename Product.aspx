@@ -9,6 +9,9 @@
          .grey_text{
              color:#535353;
          }
+         .subHead{
+             color:#333333;
+         }
       </style>
 
 </asp:Content>
@@ -50,7 +53,7 @@
 
         <div class="col-md-4">
             <h2 class="blue_text">Product Details:</h2>
-            <p class ="grey_text">
+            <p class="subHead">
                <%# item.Description %>
             </p>
         </div>
