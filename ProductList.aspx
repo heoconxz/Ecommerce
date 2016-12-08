@@ -1,27 +1,31 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="ProductList.aspx.cs" Inherits="ProductList" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeaderContent" runat="server">
     <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+</asp:Content>
+
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div>
-        <asp:Repeater runat="server" ID="itemRep">
-            <ItemTemplate>
-                <div class="card">
-                  <img class="card-img-top" src="..." alt="Card image cap">
-                  <div class="card-block">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-            </ItemTemplate>
-        </asp:Repeater>
+        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="DataSetTableAdapters.ProductTableAdapter">
+            <SelectParameters>
+                <asp:QueryStringParameter DefaultValue="1" Name="category_FK" QueryStringField="CategoryID" Type="Int32" />
+            </SelectParameters>
+        </asp:ObjectDataSource>
+        <div class="row">
+            <asp:Repeater runat="server" ID="itemRepeater">
+                 <ItemTemplate>
+
+                        <div class="card col-md-3">
+                            <img class="card-img-top" style="width:100%" src='/Picture/<%#Eval("ImageName1") %>' alt="Card image cap">
+                            <div class="card-block">
+                                <h4 class="card-title"> <%#Eval("Name") %></h4>
+                                <p class="card-text"><%# Eval("Description") %></p>
+                                <a href="#" class="btn btn-primary"> $ <%# Eval("Price")%> </a>
+                            </div>
+                       </div>
+                </ItemTemplate>
+
+            </asp:Repeater>
+        </div>
     </div>
-    </form>
-</body>
-</html>
+</asp:Content>

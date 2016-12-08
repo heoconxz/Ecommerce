@@ -9,6 +9,8 @@ public partial class ProductList : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //cmd.CommandText =
+        itemRepeater.DataSource = ObjectDataSource1;
+        itemRepeater.DataBind();
+
     }
 }

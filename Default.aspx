@@ -26,21 +26,21 @@
     <div class="row">
        <div class="col-md-4">
             <h2>BackPacks</h2>
-            <asp:HyperLink ID="Link1" runat="server" NavigateUrl="~/ProductList.aspx" onClick="Link_1">
+            <asp:HyperLink ID="Link1" runat="server" NavigateUrl="~/ProductList.aspx?CategoryID=1">
                 <img src="Picture/b32.jpg" alt="BackPack" style="position:relative; width:100%" > 
             </asp:HyperLink>
              
         </div>
         <div class="col-md-4">
             <h2>Couches</h2>
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/ProductList.aspx"  onClick="Link_2" >
+            <asp:HyperLink ID="HyperLink1" runat="server" navigateUrl="~/ProductList.aspx?CategoryID=2">
                 <img src="Picture/c11.jpg" alt="Couch" style="position:relative; width:100%">
             </asp:HyperLink>
             
         </div>
         <div class="col-md-4">
            <h2>TVs</h2>
-            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ProductList.aspx"  onClick="Link_3" >
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ProductList.aspx?CategoryID=3">
                 <img src="Picture/t22.jpg" alt="TV" style="position:relative; width:100%">
                 </asp:HyperLink>
         </div>
