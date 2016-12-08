@@ -14,15 +14,16 @@
         <div class="row">
             <asp:Repeater runat="server" ID="itemRepeater">
                  <ItemTemplate>
-
-                        <div class="card col-md-3">
-                            <img class="card-img-top" style="width:100%" src='/Picture/<%#Eval("ImageName1") %>' alt="Card image cap">
-                            <div class="card-block">
-                                <h4 class="card-title"> <%#Eval("Name") %></h4>
-                                <p class="card-text"><%# Eval("Description") %></p>
-                                <a href="#" class="btn btn-primary"> $ <%# Eval("Price")%> </a>
-                            </div>
-                       </div>
+                        <a href='/Product?ID=<%# Eval("Id") %>'>
+                            <div class="card col-md-3">
+                                <img class="card-img-top" style="width:100%" src='/Picture/<%#Eval("ImageName1") %>' alt="Card image cap">
+                                <div class="card-block">
+                                    <h4 class="card-title"> <%#Eval("Name") %></h4>
+                                    <p class="card-text"><%# Eval("Description") %></p>
+                                    <a href='/Product?ID=<%# Eval("Id") %>' class="btn btn-primary"> $ <%# Eval("Price")%> </a>
+                                </div>
+                           </div>
+                       </a>
                 </ItemTemplate>
 
             </asp:Repeater>
