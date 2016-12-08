@@ -12,6 +12,9 @@
          .subHead{
              color:#333333;
          }
+         body {
+            background-color: #282828 !important;
+         }
       </style>
 
 </asp:Content>
@@ -20,36 +23,35 @@
     <div class="row">
         <div class="col-md-6">
             <h2  class="blue_text" style="position:relative; float:left; "><%#item.Name%></h2>
-            <h2  class="blue_text" style="position:relative; float:right; "> Price: <%# item.Price %>$$</h2>    
+            <h2  class="blue_text" style="position:relative; float:right; "> Price: $<%# item.Price %></h2>    
 
             <div id="bulletLooper" data-looper="go" class="looper slide" style="width:100%">
-    <div class="looper-inner">
-        <div class="item">
-            <img src='Picture/<%# item.ImageName1 %>' alt="couch 1" style="position:relative; width:100%;">
+                <div class="looper-inner">
+                    <div class="item">
+                        <img src='Picture/<%# item.ImageName1 %>' alt="couch 1" style="position:relative; width:100%;">
+                    </div>
+                    <div class="item">
+                        <img src='Picture/<%# item.ImageName2 %>' alt=""  style=" position:relative; width:100%;">
+                    </div>
+                    <div class="item">
+                        <img src='Picture/<%# item.ImageName3 %>'  style=" position:relative; width:100%;"/>
+                    </div>
+                </div>
+        <nav>
+            <a class="looper-control" data-looper="prev" href="#bulletLooper">
+                <i class="icon-chevron-left"></i>
+            </a>
+            <a class="looper-control right" data-looper="next" href="#bulletLooper">
+                <i class="icon-chevron-right"></i>
+            </a>
+            <ul class="looper-nav">
+                <li><a href="#bulletLooper" data-looper="to" data-args="1">&bull;</a></li>
+                <li><a href="#bulletLooper" data-looper="to" data-args="2">&bull;</a></li>
+                <li><a href="#bulletLooper" data-looper="to" data-args="3">&bull;</a></li>
+            </ul>
+        </nav>
         </div>
-        <div class="item">
-            <img src='Picture/<%# item.ImageName2 %>' alt=""  style=" position:relative; width:100%;">
-        </div>
-        <div class="item">
-            <img src='Picture/<%# item.ImageName3 %>'  style=" position:relative; width:100%;"/>
-        </div>
-    </div>
-                <nav>
-        <a class="looper-control" data-looper="prev" href="#bulletLooper">
-            <i class="icon-chevron-left"></i>
-        </a>
-        <a class="looper-control right" data-looper="next" href="#bulletLooper">
-            <i class="icon-chevron-right"></i>
-        </a>
-        <ul class="looper-nav">
-            <li><a href="#bulletLooper" data-looper="to" data-args="1">&bull;</a></li>
-            <li><a href="#bulletLooper" data-looper="to" data-args="2">&bull;</a></li>
-            <li><a href="#bulletLooper" data-looper="to" data-args="3">&bull;</a></li>
-        </ul>
-    </nav>
-
       </div> 
-        </div>
 
         <div class="col-md-4">
             <h2 class="blue_text">Product Details:</h2>
@@ -58,15 +60,12 @@
             </p>
         </div>
         <div class="col-md-4" style=" ">
-
-                    <p  class="blue_text" style="float:left;"">Number of items: </p>
-                
+            <p  class="blue_text" style="float:left;"">Number of items: </p>
                <div style="float:right;"">
                    <input type = "text" id = "spinner-1" value = "0" "/>
-               </div>
-                       
+               </div>         
             <p>
-                <button type="button" style="position:relative; width:100%;">Buy Product >>></button>
+                <button type="button" class="btn btn-secondary btn-lg btn-block style="position:relative; width:100%;">Buy Product >>></button>
            </p>
         </div>
     </div>
