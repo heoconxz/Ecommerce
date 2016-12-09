@@ -36,9 +36,4 @@ public partial class Account_Order : System.Web.UI.Page
             ItemRepeater.DataBind();
         }
     }
-
-    protected void ObjectDataSource1_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
-    {
-
-    }
 }
