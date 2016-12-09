@@ -58,7 +58,7 @@
             <div class="col-md-6" style="padding-top: 4em;">
                 <p class="blueHead" style="float:left;">Number of items: </p>
                     <div>
-                        <asp:Textbox id = "quantityTextbox" TextMode="Number" min="1" max="10" step="1" runat="server"/>
+                        <asp:Textbox id = "quantityTextbox" TextMode="Number" min="1" max="10" step="1" Text="1" runat="server"/>
                     </div>         
                 <div class="btn btn-secondary btn-lg btn-block">
                     <p>
