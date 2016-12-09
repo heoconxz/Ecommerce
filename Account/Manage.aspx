@@ -4,7 +4,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
-
+    <a href="/account/order.aspx"><h2>Your Order</h2></a>
     <div>
         <asp:PlaceHolder runat="server" ID="successMessage" Visible="false" ViewStateMode="Disabled">
             <p class="text-success"><%: SuccessMessage %></p>
