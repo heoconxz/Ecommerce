@@ -1,10 +1,23 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="ProductList.aspx.cs" Inherits="ProductList" %>
+﻿<%@ Page Language="C#" Title="Product List" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="ProductList.aspx.cs" Inherits="ProductList" %>
 
 <asp:Content ID="HeadContent" ContentPlaceHolderID="HeaderContent" runat="server">
     <title></title>
 </asp:Content>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <style>
+        body {
+            background-color: #282828 !important;
+        }
+
+        .subHead {
+            color: #000000;
+        }
+
+        .blueHead {
+            color: #00a4cc;
+        }
+    </style>
     <div>
         <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="DataSetTableAdapters.ProductTableAdapter">
             <SelectParameters>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  MasterPageFile="~/Site.Master" CodeFile="Catagories.aspx.cs" Inherits="Catagories" %>
+﻿<%@ Page Language="C#" Title="Categories" AutoEventWireup="true"  MasterPageFile="~/Site.Master" CodeFile="Catagories.aspx.cs" Inherits="Catagories" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <style>
@@ -15,7 +15,7 @@
 
     <div class="row">
         <div class="col-md-4">
-            <h2 class="blueHead">BackPacks</h2>
+            <h2 class="blueHead">Backpacks</h2>
             <asp:HyperLink ID="Link1" runat="server" NavigateUrl="~/ProductList.aspx?CategoryID=1" >
                 <img src="Picture/b11.jpg" alt="BackPack" style="position:relative; width:100%" > 
             </asp:HyperLink>
