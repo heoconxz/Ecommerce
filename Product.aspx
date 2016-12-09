@@ -57,12 +57,12 @@
             </div>
             <div class="col-md-6" style="padding-top: 4em;">
                 <p class="blueHead" style="float:left;">Number of items: </p>
-                    <div style="float:right;">
-                        <asp:Textbox id = "quantityTextbox" value = "0" runat="server"/>
+                    <div>
+                        <asp:Textbox id = "quantityTextbox" TextMode="Number" min="1" max="10" step="1" runat="server"/>
                     </div>         
                 <div class="btn btn-secondary btn-lg btn-block">
                     <p>
-                        <asp:Button style="position:relative; width:100%;" onclick="BuyProductButton_Click" runat="server" Text="Add to Cart" />
+                        <asp:Button style="position:relative; width:100%;" CssClass="btn btn-secondary btn-lg btn-block" onclick="BuyProductButton_Click" runat="server" Text="Add to Cart" />
                     </p>
                 </div>
             </div>
