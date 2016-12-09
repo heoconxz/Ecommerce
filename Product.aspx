@@ -58,11 +58,13 @@
             <div class="col-md-6" style="padding-top: 4em;">
                 <p class="blueHead" style="float:left;">Number of items: </p>
                     <div style="float:right;">
-                        <input type = "text" id = "spinner-1" value = "0" "/>
+                        <asp:Textbox id = "quantityTextbox" value = "0" runat="server"/>
                     </div>         
-                <p>
-                    <button type="button" class="btn btn-secondary btn-lg btn-block" style="position:relative; width:100%;">Buy Product</button>
-                </p>
+                <div class="btn btn-secondary btn-lg btn-block">
+                    <p>
+                        <asp:Button style="position:relative; width:100%;" onclick="BuyProductButton_Click" runat="server" Text="Add to Cart" />
+                    </p>
+                </div>
             </div>
         </div> 
         <div class="row">
@@ -79,11 +81,12 @@
 <!-- Javascript -->
       <script>
           $(function () {
-              $("#spinner-1").spinner({
+              $("#quantityTextbox").spinner({
                   min: 0,
                   max: 10
               });
             
           });
+
       </script>
 </asp:Content>
