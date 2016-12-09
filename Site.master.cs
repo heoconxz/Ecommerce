@@ -73,4 +73,9 @@ public partial class SiteMaster : MasterPage
     {
         Context.GetOwinContext().Authentication.SignOut();
     }
+    
+    protected void CartButton_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Cart.aspx");
+    }
 }
