@@ -17,22 +17,19 @@
         }
     </style>
     <div class="container">
-        
-                <div id="bulletLooper" data-looper="go" class="looper slide">
-                    <div class="looper-inner">
-                        <div class="item">
-                            <img src="Images/Products/Couches/c_1_a.jpg" alt="couch 1" style="margin: auto; position:relative; height:5%; width:30%;"/>
-                        </div>
-                        <div class="item">
-                            <img src="Images/Products/Couches/c_2_a.jpg" alt=""  style="margin: auto; position:relative; height:20%; width:30%;"/>
-                        </div>
-                        <div class="item">
-                            <img src="Images/Products/Tv/t_1_b.jpg"  style="margin: auto; position:relative; height:10%; width:30%;"/>
-                        </div>
-                    </div>
+        <div id="bulletLooper" data-looper="go" class="looper slide">
+            <div class="looper-inner">
+                <div class="item">
+                    <img src="Images/Products/Couches/c_1_a.jpg" alt="couch 1" style="margin: auto; position:relative; height:5%; width:30%;"/>
                 </div>
-            
-   
+                <div class="item">
+                    <img src="Images/Products/Couches/c_2_a.jpg" alt=""  style="margin: auto; position:relative; height:20%; width:30%;"/>
+                </div>
+                <div class="item">
+                    <img src="Images/Products/Tv/t_1_b.jpg"  style="margin: auto; position:relative; height:10%; width:30%;"/>
+                </div>
+            </div>
+        </div>
         <div class="row">
            <div class="col-md-4">
                 <h2 class="blueHead">BackPacks</h2>

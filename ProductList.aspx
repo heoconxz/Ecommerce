@@ -5,6 +5,19 @@
 </asp:Content>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <style>
+        body {
+            background-color: #282828 !important;
+        }
+
+        .subHead {
+            color: #000000;
+        }
+
+        .blueHead {
+            color: #00a4cc;
+        }
+    </style>
     <div>
         <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="DataSetTableAdapters.ProductTableAdapter">
             <SelectParameters>
