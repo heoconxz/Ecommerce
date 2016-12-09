@@ -38,7 +38,6 @@
                            </div>
                        </a>
                 </ItemTemplate>
-
             </asp:Repeater>
         </div>
     </div>
