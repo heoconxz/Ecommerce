@@ -20,7 +20,6 @@
             <h2 class="blueHead">Cart</h2>
 
             <asp:Repeater runat="server" ID="myRepeater">
-               
                 <ItemTemplate>
                     <tr>
                         <%--<td><%# DataBinder.Eval(Container.DataItem, "Name") %></td>
