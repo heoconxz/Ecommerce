@@ -56,6 +56,7 @@ public partial class Account_Manage : System.Web.UI.Page
                 successMessage.Visible = !String.IsNullOrEmpty(SuccessMessage);
             }
         }
+        Page.DataBind();
     }
 
     protected void ChangePassword_Click(object sender, EventArgs e)
