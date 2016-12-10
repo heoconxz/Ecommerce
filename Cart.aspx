@@ -35,30 +35,30 @@
                 </asp:Repeater>
             </div>
         </div>
-        <asp:GridView ID="OrderGridView" runat="server" AutoGenerateColumns="False" DataSourceID="ProductDataSource" DataKeyNames="Id">
+        <asp:GridView ID="OrderGridView" runat="server" AutoGenerateColumns="False" DataSourceId="ProductDataSource" DataKeyNames="Id, Name, Price">
             <Columns>
                 <asp:TemplateField HeaderText="Product Name">
                     <EditItemTemplate>
                         <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
                     </EditItemTemplate>
                     <ItemTemplate>
-                        <asp:Label ID="Label3" runat="server" DataField="Name"></asp:Label>
+                        <asp:Label ID="NameLabel" runat="server" Text='<%# OrderGridView.DataKeys[Container.DataItemIndex]["Name"] %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField FooterText="Total Quantity:" HeaderText="Quantity">
                     <EditItemTemplate>
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="QuantityTextbox" runat="server"></asp:TextBox>
                     </EditItemTemplate>
                     <ItemTemplate>
-                        <asp:Label ID="Label1" runat="server" ></asp:Label>
+                        <asp:Label ID="QuantityLabel" runat="server" Text='<%# Request.Cookies[OrderGridView.DataKeys[Container.DataItemIndex]["Id"].ToString()].Value %>' ></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField FooterText="Total Price:" HeaderText="Price">
                     <EditItemTemplate>
-                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="PriceTextbox" runat="server"></asp:TextBox>
                     </EditItemTemplate>
                     <ItemTemplate>
-                        <asp:Label ID="Label2" runat="server" DataField="Price"></asp:Label>
+                        <asp:Label ID="PriceLabel" runat="server" Text='<%# OrderGridView.DataKeys[Container.DataItemIndex]["Price"] %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
@@ -69,9 +69,16 @@
                 <asp:CookieParameter CookieName="ProductID" Name="id" Type="Int32" />
             </SelectParameters>
         </asp:ObjectDataSource>
+        <asp:ObjectDataSource ID="OrderDataSource" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetAllData" TypeName="DataSetTableAdapters.OrderHeadTableAdapter" InsertMethod="Order_Insert">
+            <InsertParameters>
+                <asp:Parameter Name="ProductFK" Type="Int32" />
+                <asp:Parameter Name="Quantity" Type="Int32" />
+                <asp:Parameter Name="UserID" Type="String" />
+            </InsertParameters>
+        </asp:ObjectDataSource>
 
         <div class="col-md-12" style="">
-            <button type="button" class="btn btn-secondary btn-lg btn-block" style="position: relative; width: 100%;">Buy >>></button>
+            <asp:Button id="BuyButton" class="btn btn-secondary btn-lg btn-block" style='position: relative; width: 100%;' runat="server" Text="Buy >>>" onclick="BuyButton_Click"/>
         </div>
     </div>
 </asp:Content>
